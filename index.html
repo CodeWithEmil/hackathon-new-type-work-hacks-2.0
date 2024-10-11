@@ -9,6 +9,10 @@
 
       <!--Stylesheets-->
       <link rel="stylesheet" href="styles/general.css">
+      <link rel="stylesheet" href="styles/styles.css">
+      <link rel="stylesheet" href="styles/image-slider.css">
+      <link rel="stylesheet" href="styles/promotion.css">
+      <link rel="stylesheet" href="styles/cover-button.css">
 
       <!--Meta tags-->
       <meta charset="UTF-8">
@@ -27,9 +31,55 @@
    </head>
    <body>
       <!--HTML Elements-->
-      <h1>Sample text</h1>
+      
+      <!--<h1>TecDroid is more than a robotics team. We are a community of innovators.</h1>-->
+      <!--? Cover-->
+      <section class="section-padding section-important-bg">
+         <h2 class="title-2">Think big.<br><br> Think smart.<br><br> Think TecDroid.</h2>
+         <button class="cover-button">
+            <svg viewBox="0 0 24 24" class="cover-button-arr-2" xmlns="http://www.w3.org/2000/svg">
+               <path d="M16.1716 10.9999L10.8076 5.63589L12.2218 4.22168L20 11.9999L12.2218 19.778L10.8076 18.3638L16.1716 12.9999H4V10.9999H16.1716Z"></path>
+            </svg>
+            <span class="cover-button-text">Join now</span>
+            <span class="cover-button-circle"></span>
+            <svg viewBox="0 0 24 24" class="cover-button-arr-1" xmlns="http://www.w3.org/2000/svg">
+               <path d="M16.1716 10.9999L10.8076 5.63589L12.2218 4.22168L20 11.9999L12.2218 19.778L10.8076 18.3638L16.1716 12.9999H4V10.9999H16.1716Z"></path>
+            </svg>
+         </button>
+      </section>
+
+      <!--? Image slider-->
+      <section class="section-padding reveal">
+         <h2 class="title-2">FIRST Robotics Competition.</h2>
+         
+         <div class="image-slider">
+            <div class="image-slider-slides js-image-slider-slides">
+               <img src="images/competition-files/robot-1.jpg">
+               <img src="images/competition-files/tecdroid-1.png">
+               <img src="images/competition-files/tecdroid-2.png">
+               <img src="images/competition-files/tecdroid-3.png">
+            </div>
+
+            <span class="image-slider-prev js-image-slider-prev">&#10094;</span>
+            <span class="image-slider-next js-image-slider-next">&#10095;</span>
+         </div>
+      </section>
+
+      <!--? Take a closer look-->
+      <section class="section-padding reveal">
+         <h2 class="title-2">Take a closer look.</h2>
+         <!--<img src="images/competition-files/robot-1.JPG" class="img-1">-->
+      </section>
+
+      <!--? Promotion-->
+      <section class="section-padding section-alt-bg section-centered reveal">
+         <h2 class="title-1">We're a community of <span class="promotion-font-PENDING">innovators</span>.</h2>
+      </section>
+
+
+
 
       <!--Script tags-->
-      <script src="./scripts/index.js"></script>
+      <script src="./scripts/index.js" type="module"></script>
    </body>
 </html>

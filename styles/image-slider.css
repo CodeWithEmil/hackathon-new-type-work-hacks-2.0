@@ -1,0 +1,42 @@
+/* Slider container */
+.image-slider {
+   height: 80%;
+   width: 100%;
+
+   border-radius: 2rem;
+
+   overflow: hidden;
+   position: relative;
+}
+
+/* Images in the slider */
+.image-slider-slides {
+   display: flex;
+   width: 100%;
+   transition: 0.5s ease-in-out;
+}
+
+.image-slider-slides img {
+   width: 100%;
+   align-self: flex-start;
+}
+
+/* Navigation buttons */
+.image-slider-prev,
+.image-slider-next {
+   position: absolute;
+   top: 50%;
+   transform: translateY(-50%);
+   background-color: rgba(0, 0, 0, 0.5);
+   color: white;
+   padding: 10px;
+   cursor: pointer;
+}
+
+.image-slider-prev {
+   left: 0;
+}
+
+.image-slider-next {
+   right: 0;
+}
