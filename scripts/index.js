@@ -10,7 +10,7 @@ document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
    });
 });
 
-// Reveal content on scroll
+// Revealing content on scroll
 window.addEventListener("scroll", function () {
    const reveals = document.querySelectorAll(".reveal");
 
