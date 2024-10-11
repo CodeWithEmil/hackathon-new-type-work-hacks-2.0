@@ -1,2 +1,4 @@
 /inspo
-/styles/promotion.css
+
+*.css
+*.css.map

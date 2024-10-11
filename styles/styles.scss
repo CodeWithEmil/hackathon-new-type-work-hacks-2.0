@@ -1,0 +1,138 @@
+
+/* Text */
+.title-1 {
+   font-size: 4rem;
+   font-weight: 600;
+}
+
+.title-2 {
+   font-size: 3rem;
+   font-weight: 600;
+}
+
+.title-centered {
+   text-align: center;
+}
+
+.quote {
+   display: flex;
+   justify-content: space-evenly;
+
+   .quote-text {
+      height: 100%;
+      width: 55%;
+
+      .quote-sign {
+         font-size: 10rem;
+         font-weight: 100;
+         color: #FFCC00;
+      }
+
+      .quote-quote {
+         font-size: 2rem;
+         font-weight: 400;
+      }
+   }
+
+   .quote-speaker {
+      height: 100%;
+      width: 30%;
+      padding-right: 1rem;
+
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      align-items: flex-start;
+      
+
+      .quote-image {
+         height: 3rem;
+         margin-bottom: 1.5rem;
+      }
+
+      .quote-person {
+         width: 60%;
+         display: flex;
+         justify-content: space-between;
+         
+         .quote-person-text {
+            font-size: 1rem;
+            font-weight: 400;
+
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+         }
+
+         .quote-person-image {
+            height: 3rem;
+            border-radius: 50%;
+         }
+      }
+   }
+}
+
+/* Buttons */
+.button-alt {
+   border: 0;
+   cursor: pointer;
+}
+
+/* Sections */
+.section-cover {
+   display: flex;
+   flex-direction: row;
+   justify-content: flex-start;
+
+   .section-cover-group {
+      height: 45%;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: flex-start;
+   }
+}
+
+.section-padding {
+   padding: 2rem 7rem;
+   height: 110vh;
+
+   display: flex;
+   flex-direction: column;
+   justify-content: space-around;
+   align-items: flex-start;
+}
+
+.section-important-bg {
+   background-color: #FFCC00;
+}
+
+.section-alt-bg {
+   background-color: #F5F5F6
+}
+
+.section-centered {
+   align-items: center;
+}
+
+.divisor {
+   height: 8rem;
+   background-color: #1c1c1c;
+   margin-bottom: 1rem;
+   
+   display: grid;
+   place-items: center;
+}
+
+.divisor h2 {
+   color: #F5F5F6;
+}
+
+/* Images */
+.img-1 {
+   height: 43rem;
+   border-radius: 2rem;
+
+   aspect-ratio: 16 / 9;
+   object-fit: fill;
+}
