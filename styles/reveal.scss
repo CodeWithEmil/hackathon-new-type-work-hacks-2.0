@@ -1,0 +1,33 @@
+
+//Revealing content on scroll
+.reveal {
+   opacity: 0;
+   transform: translateY(100px);
+   transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.reveal.active {
+   opacity: 1;
+   transform: translateY(0);
+}
+
+//Underline effect after scroll
+.underline-effect {
+   position: relative;
+   text-decoration: none;
+}
+
+.underline-effect::after {
+   content: '';
+   position: absolute;
+   left: 0;
+   bottom: 0;
+   width: 0;
+   height: 0.5rem;
+   background-color: #FFCC00;
+   transition: width 1.8s ease;
+}
+
+.underline-effect.active::after {
+   width: 100%;
+}

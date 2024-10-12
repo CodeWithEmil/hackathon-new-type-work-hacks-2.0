@@ -21,6 +21,17 @@ window.addEventListener("scroll", function () {
    });
 });
 
+//Underlined elements
+window.addEventListener("scroll", function() {
+   const underlines = document.querySelectorAll(".underline-effect");
+   
+   underlines.forEach((underline) => {
+      if (isInViewport(underline)) {
+         underline.classList.add("active");
+      }
+   })
+})
+
 function isInViewport(element) {
    const rect = element.getBoundingClientRect();
    return rect.top < window.innerHeight && rect.bottom >= 0;

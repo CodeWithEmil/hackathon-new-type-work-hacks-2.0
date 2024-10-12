@@ -13,17 +13,17 @@
    white-space: nowrap;
    color: #595959;
    font-size: 1.5rem;
-   animation: scroll-horizontal 60s linear infinite;
+   animation: scroll-horizontal 16s linear infinite;
 
    font-family: "JetBrains Mono";
 }
 
 @keyframes scroll-horizontal {
    0% {
-      transform: translateX(0%);
+      transform: translateX(0);
    }
 
    100% {
-      transform: translateX(-100%);
+      transform: translateX(-250px*7);
    }
 }

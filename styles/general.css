@@ -11,55 +11,12 @@
   font-weight: 600;
 }
 
-.title-centered {
-  text-align: center;
+.title-bold {
+  font-weight: 900;
 }
 
-.quote {
-  display: flex;
-  justify-content: space-evenly;
-}
-.quote .quote-text {
-  height: 100%;
-  width: 55%;
-}
-.quote .quote-text .quote-sign {
-  font-size: 10rem;
-  font-weight: 100;
-  color: #FFCC00;
-}
-.quote .quote-text .quote-quote {
-  font-size: 2rem;
-  font-weight: 400;
-}
-.quote .quote-speaker {
-  height: 100%;
-  width: 30%;
-  padding-right: 1rem;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
-  align-items: flex-start;
-}
-.quote .quote-speaker .quote-image {
-  height: 3rem;
-  margin-bottom: 1.5rem;
-}
-.quote .quote-speaker .quote-person {
-  width: 60%;
-  display: flex;
-  justify-content: space-between;
-}
-.quote .quote-speaker .quote-person .quote-person-text {
-  font-size: 1rem;
-  font-weight: 400;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
-.quote .quote-speaker .quote-person .quote-person-image {
-  height: 3rem;
-  border-radius: 50%;
+.title-centered {
+  text-align: center;
 }
 
 /* Buttons */
@@ -239,7 +196,7 @@
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: rgba(0, 0, 0, 0.5019607843);
   color: white;
   padding: 10px;
   cursor: pointer;
@@ -254,7 +211,7 @@
 }
 
 .infinite-image-slider-section {
-  height: 110vh;
+  height: 100vh;
   padding-top: 10rem;
   display: flex;
   flex-direction: column;
@@ -318,18 +275,99 @@
   white-space: nowrap;
   color: #595959;
   font-size: 1.5rem;
-  animation: scroll-horizontal 60s linear infinite;
+  animation: scroll-horizontal 16s linear infinite;
   font-family: "JetBrains Mono";
 }
 
 @keyframes scroll-horizontal {
   0% {
-    transform: translateX(0%);
+    transform: translateX(0);
   }
   100% {
-    transform: translateX(-100%);
+    transform: translateX(-1750px);
   }
 }
+.quote {
+  display: flex;
+  justify-content: space-evenly;
+}
+.quote .quote-text {
+  height: 100%;
+  width: 55%;
+}
+.quote .quote-text .quote-sign {
+  font-size: 10rem;
+  font-weight: 100;
+  width: fit-content;
+  margin-bottom: 2rem;
+}
+.quote .quote-text .quote-quote {
+  font-size: 2rem;
+  font-weight: 400;
+}
+.quote .quote-speaker {
+  height: 100%;
+  width: 30%;
+  padding-right: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-start;
+}
+.quote .quote-speaker .quote-image {
+  height: 3rem;
+  margin-bottom: 1.5rem;
+}
+.quote .quote-speaker .quote-person {
+  width: 70%;
+  display: flex;
+  justify-content: flex-start;
+}
+.quote .quote-speaker .quote-person .quote-person-text {
+  width: fit-content;
+  font-size: 1rem;
+  font-weight: 400;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.quote .quote-speaker .quote-person .quote-person-image {
+  height: 3rem;
+  border-radius: 50%;
+  margin-right: 0.5rem;
+}
+
+.reveal {
+  opacity: 0;
+  transform: translateY(100px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.reveal.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.underline-effect {
+  position: relative;
+  text-decoration: none;
+}
+
+.underline-effect::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0;
+  height: 0.5rem;
+  background-color: #FFCC00;
+  transition: width 1.8s ease;
+}
+
+.underline-effect.active::after {
+  width: 100%;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -340,18 +378,6 @@
 
 body {
   width: 100vw;
-}
-
-/* Revealing content on scroll*/
-.reveal {
-  opacity: 0;
-  transform: translateY(100px);
-  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
-}
-
-.reveal.active {
-  opacity: 1;
-  transform: translateY(0);
 }
 
 /*# sourceMappingURL=general.css.map */
