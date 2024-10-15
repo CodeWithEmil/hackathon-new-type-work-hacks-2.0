@@ -1,4 +1,6 @@
 import "./image-slider.js";
+import "./impact.js";
+//import "./navbar.js";
 
 document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
    anchor.addEventListener("click", function (e) {
