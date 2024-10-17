@@ -28,6 +28,11 @@
    transition: width 1.8s ease;
 }
 
+.underline-effect-alt::after {
+   height: 0.4rem;
+   background-color: #ffcc00a0;
+}
+
 .underline-effect.active::after {
    width: 100%;
 }

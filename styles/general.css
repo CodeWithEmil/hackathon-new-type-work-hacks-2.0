@@ -11,6 +11,16 @@
   font-weight: 600;
 }
 
+.title-3 {
+  font-size: 2rem;
+  font-weight: 550;
+}
+
+.title-bg {
+  color: #F5F5F6;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+}
+
 .title-bold {
   font-weight: 900;
 }
@@ -23,13 +33,24 @@
   width: 70%;
 }
 
-.caption {
+.caption, .caption-alt {
   font-size: 1.1rem;
   color: #6E6E73;
 }
-.caption .title-bold {
+.caption .title-bold, .caption-alt .title-bold {
   font-weight: 700;
   color: #393939;
+}
+
+.caption-alt {
+  font-size: 1.2rem;
+}
+
+.font-alt {
+  font-family: "JetBrains Mono";
+  color: #595959;
+  font-size: 1.1rem;
+  align-self: center;
 }
 
 /* Buttons */
@@ -55,10 +76,15 @@
 .section-padding {
   padding: 2rem 7rem;
   height: 120vh;
+  min-height: 120vh;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
   align-items: flex-start;
+}
+
+.first-competition {
+  height: fit-content;
 }
 
 .section-important-bg {
@@ -69,8 +95,24 @@
   background-color: #F5F5F6;
 }
 
+.section-third-bg {
+  background: linear-gradient(to bottom, #F5F5F6, #fff);
+}
+
 .section-centered {
   align-items: center;
+}
+
+.margin-top {
+  margin-top: 3rem;
+}
+
+.padding-top {
+  padding-top: 6rem;
+}
+
+.padding-top-alt {
+  padding-top: 2rem;
 }
 
 .divisor {
@@ -80,17 +122,36 @@
   display: grid;
   place-items: center;
 }
-
 .divisor h2 {
   color: #F5F5F6;
 }
 
 /* Images */
+.img-w-caption {
+  height: 35rem;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+.img-w-caption .img-w-caption-text {
+  height: 11rem;
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.img-w-caption-reverse {
+  flex-direction: row-reverse;
+}
+
 .img-1 {
-  height: 43rem;
-  border-radius: 2rem;
+  height: 23rem;
+  box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 50px 0px;
   aspect-ratio: 16/9;
-  object-fit: fill;
+  object-fit: cover;
 }
 
 .cover-button {
@@ -377,14 +438,18 @@
   transition: width 1.8s ease;
 }
 
+.underline-effect-alt::after {
+  height: 0.4rem;
+  background-color: rgba(255, 204, 0, 0.6274509804);
+}
+
 .underline-effect.active::after {
   width: 100%;
 }
 
 /* Main "Our Impact" section */
 .our-impact {
-  padding: 2rem 0 1rem 0;
-  margin: 3rem 0;
+  padding-bottom: 1rem;
   position: relative;
   width: 100%;
   height: 110vh;
@@ -421,11 +486,6 @@
   overflow: hidden;
 }
 
-.impact-item h3 {
-  font-size: 1.5rem;
-  z-index: 1;
-}
-
 .impact-item:before {
   content: "";
   position: absolute;
@@ -440,6 +500,7 @@
 }
 
 .impact-item:hover {
+  filter: brightness(1);
   transform: scale(1.05);
 }
 
@@ -463,7 +524,7 @@
   text-align: center;
   padding: 20px;
   box-sizing: border-box;
-  z-index: 1;
+  z-index: 3;
   opacity: 0;
   pointer-events: none;
   transition: opacity 0.8s ease, background-image 0.5s ease;

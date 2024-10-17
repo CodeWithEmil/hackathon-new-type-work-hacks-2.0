@@ -10,6 +10,16 @@
    font-weight: 600;
 }
 
+.title-3 {
+   font-size: 2rem;
+   font-weight: 550;
+}
+
+.title-bg {
+   color: #F5F5F6;
+   text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+}
+
 .title-bold {
    font-weight: 900;
 }
@@ -22,7 +32,7 @@
    width: 70%;
 }
 
-.caption {
+.caption, .caption-alt {
    font-size: 1.1rem;
    color: #6E6E73;
    
@@ -30,6 +40,17 @@
       font-weight: 700;
       color: #393939;
    }
+}
+
+.caption-alt {
+   font-size: 1.2rem;
+}
+
+.font-alt {
+   font-family: "JetBrains Mono";
+   color: #595959;
+   font-size: 1.1rem;
+   align-self: center;
 }
 
 /* Buttons */
@@ -54,13 +75,19 @@
 }
 
 .section-padding {
+   //border: solid orange;
    padding: 2rem 7rem;
    height: 120vh;
+   min-height: 120vh;
 
    display: flex;
    flex-direction: column;
    justify-content: space-around;
    align-items: flex-start;
+}
+
+.first-competition {
+   height: fit-content;
 }
 
 .section-important-bg {
@@ -71,8 +98,24 @@
    background-color: #F5F5F6
 }
 
+.section-third-bg {
+   background: linear-gradient(to bottom, #F5F5F6, #fff);
+}
+
 .section-centered {
    align-items: center;
+}
+
+.margin-top {
+   margin-top: 3rem;
+}
+
+.padding-top {
+   padding-top: 6rem;
+}
+
+.padding-top-alt {
+   padding-top: 2rem;
 }
 
 .divisor {
@@ -82,17 +125,44 @@
    
    display: grid;
    place-items: center;
-}
 
-.divisor h2 {
-   color: #F5F5F6;
+   h2 {
+      color: #F5F5F6;
+   }
 }
 
 /* Images */
+.img-w-caption {
+   //border: solid red;
+   height: 35rem;
+   width: 100%;
+
+   display: flex;
+   flex-direction: row;
+   justify-content: space-between;
+   align-items: center;
+
+   .img-w-caption-text {
+      //border: solid plum;
+      height: 11rem;
+      width: 40%;
+
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+   }
+}
+
+.img-w-caption-reverse {
+   flex-direction: row-reverse;
+}
+
 .img-1 {
-   height: 43rem;
-   border-radius: 2rem;
+   height: 23rem;
+   //height: 50%;
+   //border-radius: 2rem;
+   box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 50px 0px;
 
    aspect-ratio: 16 / 9;
-   object-fit: fill;
+   object-fit: cover;
 }
