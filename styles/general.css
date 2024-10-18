@@ -33,6 +33,10 @@
   width: 70%;
 }
 
+.title-font-alt {
+  font-family: "JetBrains Mono";
+}
+
 .caption, .caption-alt {
   font-size: 1.1rem;
   color: #6E6E73;
@@ -486,11 +490,14 @@
   align-items: center;
   justify-content: space-around;
   /* Background image for hover effect */
+  /* Replacement images */
+  /* Display replacement images when hovered */
   /* Display image when hovered */
   /* Fade out content when hovered */
 }
 .impact-item .caption {
-  color: #1b1b1b;
+  color: #383838;
+  font-size: 1rem;
   transition: opacity 0.3s ease;
 }
 .impact-item .impact-background-image {
@@ -505,6 +512,23 @@
   transition: opacity 0.3s ease;
   z-index: -1;
   /* Place it behind the item */
+}
+.impact-item .impact-replacement-images {
+  display: none;
+  /* Initially hidden */
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+  z-index: 1;
+  /* Place it above the background image */
+}
+.impact-item:hover .impact-replacement-images {
+  display: flex;
+  /* Show the replacement images */
 }
 .impact-item:hover .impact-background-image {
   opacity: 1;
@@ -522,8 +546,7 @@
   background-color: #FFB400;
 }
 .impact-4them .impact-background-image {
-  background-image: url("images/4impact/4them/image.jpg");
-  /* Change to your image */
+  background-image: url(".jpg");
 }
 .impact-4them .impact-icon-container i {
   color: #FFB400;
@@ -533,8 +556,7 @@
   background-color: #FF616D;
 }
 .impact-4her .impact-background-image {
-  background-image: url("images/4impact/4her/image.jpg");
-  /* Change to your image */
+  background-image: url(".jpg");
 }
 .impact-4her .impact-icon-container i {
   color: #FF616D;
@@ -544,8 +566,7 @@
   background-color: #5BC0EB;
 }
 .impact-4all .impact-background-image {
-  background-image: url("images/4impact/4all/image.jpg");
-  /* Change to your image */
+  background-image: url(".jpg");
 }
 .impact-4all .impact-icon-container i {
   color: #5BC0EB;
@@ -555,8 +576,7 @@
   background-color: #9BC53D;
 }
 .impact-4us .impact-background-image {
-  background-image: url("../images/4impact/4us/IMG_3884.JPG");
-  /* Change to your image */
+  background-image: url(".jpg");
 }
 .impact-4us .impact-icon-container i {
   color: #9BC53D;
@@ -583,6 +603,21 @@
 .impact-icon-container i {
   color: #1b1b1b;
   font-size: 2rem;
+}
+
+/* Styles for replacement images */
+.replacement-image {
+  width: 30%;
+  aspect-ratio: 9/9;
+  object-fit: cover;
+  border: solid #fff;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.impact-item:hover .replacement-image {
+  opacity: 1;
+  /* Fade in replacement images */
 }
 
 * {
