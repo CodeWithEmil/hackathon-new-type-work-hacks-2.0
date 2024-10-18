@@ -1,10 +1,10 @@
 /* Main "Our Impact" section */
 .our-impact {
-   //border: solid red;
    padding-bottom: 1rem;
    position: relative;
    width: 100%;
-   height: 110vh;
+   min-height: 110vh;
+   height: fit-content;
 
    display: flex;
    flex-direction: column;
@@ -14,90 +14,150 @@
    }
 }
 
-/* Grid layout: 2 rows, 2 columns */
-.impact-grid {
-   margin-top: 3rem;
+.impact-section {
    display: grid;
    grid-template-columns: repeat(2, 1fr);
-   grid-template-rows: repeat(2, 1fr);
-   gap: 20px;
-   height: 100%;
-   z-index: 2;
-   //Grid items above the overlay
+   grid-gap: 40px;
+   max-width: 1200px;
+   margin: 0 auto;
 }
 
-/* Individual grid items with background image */
+/* Impact Item Styling */
 .impact-item {
-   //border: solid red;
-   background-size: cover;
-   background-position: center;
-   color: white;
-   text-align: center;
-   display: flex;
-   justify-content: center;
-   align-items: center;
-   cursor: pointer;
-   transition: transform 0.3s ease, background-color 0.3s ease;
    position: relative;
+   background-color: #F5F5F6;
+   border-radius: 1rem;
+   height: 20rem;
+   padding: 3rem 5rem;
+   text-align: center;
+   transition: transform 0.4s ease, box-shadow 0.4s ease;
    overflow: hidden;
-   //filter: brightness(0.3);
+   cursor: pointer;
+   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: space-around;
+
+   .caption {
+      color: #1b1b1b;
+      transition: opacity 0.3s ease;
+   }
+
+   /* Background image for hover effect */
+   .impact-background-image {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-size: cover;
+      background-position: center;
+      opacity: 0;
+      transition: opacity 0.3s ease;
+      z-index: -1;
+      /* Place it behind the item */
+   }
+
+   /* Display image when hovered */
+   &:hover .impact-background-image {
+      opacity: 1;
+   }
+
+   /* Fade out content when hovered */
+   &:hover .impact-icon-container,
+   &:hover .title-3,
+   &:hover .caption {
+      opacity: 0;
+      /* Fade out content */
+   }
+
+   .impact-icon-container {
+      transition: opacity 0.3s ease;
+   }
 }
 
-.impact-item:before {
-   content: "";
-   position: absolute;
-   top: 0;
-   left: 0;
-   width: 100%;
-   height: 100%;
-   background-color: #ffcc0075;
-   opacity: 0;
-   transition: opacity 0.3s ease;
-   z-index: 0;
+/* Add multi-colored background per item */
+.impact-4them {
+   background-color: #FFB400;
+
+   .impact-background-image {
+      background-image: url('images/4impact/4them/image.jpg');
+      /* Change to your image */
+   }
+
+   .impact-icon-container {
+      i {
+         color: #FFB400;
+      }
+   }
 }
 
-//Hover effect
+.impact-4her {
+   background-color: #FF616D;
+
+   .impact-background-image {
+      background-image: url('images/4impact/4her/image.jpg');
+      /* Change to your image */
+   }
+
+   .impact-icon-container {
+      i {
+         color: #FF616D;
+      }
+   }
+}
+
+.impact-4all {
+   background-color: #5BC0EB;
+
+   .impact-background-image {
+      background-image: url('images/4impact/4all/image.jpg');
+      /* Change to your image */
+   }
+
+   .impact-icon-container {
+      i {
+         color: #5BC0EB;
+      }
+   }
+}
+
+.impact-4us {
+   background-color: #9BC53D;
+
+   .impact-background-image {
+      background-image: url('../images/4impact/4us/IMG_3884.JPG');
+      /* Change to your image */
+   }
+
+   .impact-icon-container {
+      i {
+         color: #9BC53D;
+      }
+   }
+}
+
+/* Hover Effect */
 .impact-item:hover {
-   filter: brightness(1);
-   transform: scale(1.05);
+   transform: translateY(-10px);
+   box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
 }
 
-.impact-item:hover:before {
-   opacity: 1;
-}
-
-//Overlay
-
-.impact-overlay {
-   position: absolute;
-   top: 0;
-   left: 0;
-   width: 100%;
-   height: 100%;
-   background-size: cover;
-   background-position: center;
+/* Icon container */
+.impact-icon-container {
+   height: 5rem;
+   width: 5rem;
+   background-color: #fff;
+   border-radius: 50%;
    display: flex;
    justify-content: center;
    align-items: center;
-   flex-direction: column;
-   color: white;
-   text-align: center;
-   padding: 20px;
-   box-sizing: border-box;
-   z-index: 3;
-   opacity: 0;
-   pointer-events: none;
-   transition: opacity 0.8s ease, background-image 0.5s ease;
-   cursor: pointer;
-}
+   margin-bottom: 20px;
+   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
 
-.impact-overlay h1,
-.impact-overlay p {
-   pointer-events: none;
-}
-
-.impact-overlay.active {
-   opacity: 1;
-   z-index: 3;
-   pointer-events: auto;
+   i {
+      color: #1b1b1b;
+      font-size: 2rem;
+   }
 }

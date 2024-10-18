@@ -1,32 +1,28 @@
-// Get all impact items and overlay elements
 const impactItems = document.querySelectorAll(".impact-item");
-const overlay = document.querySelector(".impact-overlay");
-const overlayTitle = document.getElementById("overlay-title");
-const overlayDescription = document.getElementById("overlay-description");
 
-// Add event listener for clicking on grid items
 impactItems.forEach((item) => {
-   item.addEventListener("click", () => {
-      // Get data attributes from the clicked item
-      const title = item.getAttribute("data-title");
-      const description = item.getAttribute("data-description");
-      const background = item.getAttribute("data-background");
+   item.addEventListener("mouseenter", () => {
+      impactItems.forEach((otherItem) => {
+         if (otherItem !== item) {
+            otherItem.querySelector(".caption").style.opacity = "0";
+            otherItem.querySelector("h2").style.opacity = "0";
+            otherItem.querySelector(".impact-icon-container").style.opacity = "0";
 
-      // Update the overlay content
-      overlay.style.backgroundImage = background;
-      overlayTitle.textContent = title;
-      overlayDescription.textContent = description;
-
-      // Show the overlay by adding the active class
-      overlay.classList.add("active");
+            //Show background image
+            otherItem.querySelector(".impact-background-image").style.opacity = "1";
+         }
+      });
    });
-});
 
-// Add event listener for clicking on the overlay background to go back
-overlay.addEventListener("click", (e) => {
-   // Check if the clicked element is the overlay itself, not the text content
-   if (e.target === overlay) {
-      // Hide the overlay by removing the active class
-      overlay.classList.remove("active");
-   }
+   item.addEventListener("mouseleave", () => {
+      impactItems.forEach((otherItem) => {
+         otherItem.querySelector(".caption").style.opacity = "1"; // Fade in caption
+         otherItem.querySelector("h2").style.opacity = "1"; // Fade in title
+         otherItem.querySelector(".impact-icon-container").style.opacity = "1";
+
+         //Hide background image
+         otherItem.querySelector(".impact-background-image").style.opacity =
+            "0"; 
+      });
+   });
 });
