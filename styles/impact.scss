@@ -1,5 +1,6 @@
 /* Main "Our Impact" section */
 .our-impact {
+   //border: solid red;
    padding-bottom: 1rem;
    position: relative;
    width: 100%;
@@ -15,6 +16,7 @@
 }
 
 .impact-section {
+   //border: solid lime;
    display: grid;
    grid-template-columns: repeat(2, 1fr);
    grid-gap: 40px;
@@ -25,12 +27,12 @@
 /* Impact Item Styling */
 .impact-item {
    position: relative;
-   background-color: #F5F5F6;
+   background-color: #fbfbfb;
    border-radius: 1rem;
    height: 20rem;
    padding: 3rem 5rem;
    text-align: center;
-   transition: transform 0.4s ease, box-shadow 0.4s ease;
+   transition: transform 0.4s ease, box-shadow 0.4s ease, background-color 0.4s ease;
    overflow: hidden;
    cursor: pointer;
    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
@@ -101,7 +103,9 @@
 
 /* Add multi-colored background per item */
 .impact-4them {
-   background-color: #FFB400;
+   //background-color: #FFB400;
+   
+   border: solid 3px #FFB400;
 
    .impact-background-image {
       background-image: url('.jpg');
@@ -114,8 +118,13 @@
    }
 }
 
+.impact-4them:hover {
+   background-color: #FFB400;
+}
+
 .impact-4her {
-   background-color: #FF616D;
+   //background-color: #FF616D;
+   border: solid 3px #FF616D;
 
    .impact-background-image {
       background-image: url('.jpg');
@@ -128,8 +137,13 @@
    }
 }
 
+.impact-4her:hover {
+   background-color: #FF616D;
+}
+
 .impact-4all {
-   background-color: #5BC0EB;
+   //background-color: #5BC0EB;
+   border: solid 3px #5BC0EB;
 
    .impact-background-image {
       background-image: url('.jpg');
@@ -142,8 +156,13 @@
    }
 }
 
+.impact-4all:hover {
+   background-color: #5BC0EB;
+}
+
 .impact-4us {
-   background-color: #9BC53D;
+   //background-color: #9BC53D;
+   border: solid 3px #9BC53D;
 
    .impact-background-image {
       background-image: url('.jpg');
@@ -154,6 +173,10 @@
          color: #9BC53D;
       }
    }
+}
+
+.impact-4us:hover {
+   background-color: #9BC53D;
 }
 
 /* Hover Effect */

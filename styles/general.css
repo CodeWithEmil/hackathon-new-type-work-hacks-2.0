@@ -6,8 +6,18 @@
   font-weight: 600;
 }
 
+.title-1-2 {
+  font-size: 3.5rem;
+  font-weight: 600;
+}
+
 .title-2 {
   font-size: 3rem;
+  font-weight: 600;
+}
+
+.title-2-2 {
+  font-size: 2.5rem;
   font-weight: 600;
 }
 
@@ -27,6 +37,7 @@
 
 .title-centered {
   text-align: center;
+  align-self: center;
 }
 
 .title-padding {
@@ -109,6 +120,10 @@
 
 .margin-top {
   margin-top: 3rem;
+}
+
+.margin-bottom {
+  margin-bottom: 7rem;
 }
 
 .padding-top {
@@ -476,12 +491,12 @@
 /* Impact Item Styling */
 .impact-item {
   position: relative;
-  background-color: #F5F5F6;
+  background-color: #fbfbfb;
   border-radius: 1rem;
   height: 20rem;
   padding: 3rem 5rem;
   text-align: center;
-  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  transition: transform 0.4s ease, box-shadow 0.4s ease, background-color 0.4s ease;
   overflow: hidden;
   cursor: pointer;
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
@@ -543,7 +558,7 @@
 
 /* Add multi-colored background per item */
 .impact-4them {
-  background-color: #FFB400;
+  border: solid 3px #FFB400;
 }
 .impact-4them .impact-background-image {
   background-image: url(".jpg");
@@ -552,8 +567,12 @@
   color: #FFB400;
 }
 
+.impact-4them:hover {
+  background-color: #FFB400;
+}
+
 .impact-4her {
-  background-color: #FF616D;
+  border: solid 3px #FF616D;
 }
 .impact-4her .impact-background-image {
   background-image: url(".jpg");
@@ -562,8 +581,12 @@
   color: #FF616D;
 }
 
+.impact-4her:hover {
+  background-color: #FF616D;
+}
+
 .impact-4all {
-  background-color: #5BC0EB;
+  border: solid 3px #5BC0EB;
 }
 .impact-4all .impact-background-image {
   background-image: url(".jpg");
@@ -572,14 +595,22 @@
   color: #5BC0EB;
 }
 
+.impact-4all:hover {
+  background-color: #5BC0EB;
+}
+
 .impact-4us {
-  background-color: #9BC53D;
+  border: solid 3px #9BC53D;
 }
 .impact-4us .impact-background-image {
   background-image: url(".jpg");
 }
 .impact-4us .impact-icon-container i {
   color: #9BC53D;
+}
+
+.impact-4us:hover {
+  background-color: #9BC53D;
 }
 
 /* Hover Effect */
@@ -618,6 +649,29 @@
 .impact-item:hover .replacement-image {
   opacity: 1;
   /* Fade in replacement images */
+}
+
+.stats {
+  height: 80%;
+  width: 100%;
+  display: grid;
+  grid-template-rows: repeat(3, 1fr);
+}
+.stats .stats-number {
+  border: 0.25rem dashed #1b1b1b;
+  height: calc(fit-content + 2rem);
+  padding: 4rem 0;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+.stats .stats-number .caption {
+  width: 50%;
+}
+.stats .stats-number:not(:nth-of-type(3)) {
+  border-bottom: none;
 }
 
 * {

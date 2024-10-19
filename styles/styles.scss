@@ -5,8 +5,18 @@
    font-weight: 600;
 }
 
+.title-1-2 {
+   font-size: 3.5rem;
+   font-weight: 600;
+}
+
 .title-2 {
    font-size: 3rem;
+   font-weight: 600;
+}
+
+.title-2-2 {
+   font-size: 2.5rem;
    font-weight: 600;
 }
 
@@ -26,6 +36,7 @@
 
 .title-centered {
    text-align: center;
+   align-self: center;
 }
 
 .title-padding {
@@ -112,6 +123,10 @@
 
 .margin-top {
    margin-top: 3rem;
+}
+
+.margin-bottom {
+   margin-bottom: 7rem;
 }
 
 .padding-top {

@@ -1,5 +1,6 @@
 import "./image-slider.js";
 import "./impact.js";
+import "./number-counter.js";
 //import "./navbar.js";
 
 document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
