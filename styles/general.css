@@ -178,6 +178,57 @@
   object-fit: cover;
 }
 
+@media (max-width: 400px) {
+  * {
+    transform: scale(0.8);
+  }
+}
+@media (max-width: 768px) {
+  .section-padding {
+    padding: 1rem;
+  }
+  .image-slider .image-slider-slides img {
+    width: 100%;
+    height: auto;
+  }
+  .impact-section {
+    display: flex;
+    flex-direction: column;
+  }
+  .impact-section .impact-item {
+    margin-bottom: 2rem;
+  }
+  .impact-section .impact-item .impact-background-image {
+    background-size: cover;
+  }
+  .stats {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .stats .stats-number {
+    margin-bottom: 2rem;
+  }
+  .join-now-section .join-form-section form {
+    flex-direction: column;
+  }
+  footer .footer-columns {
+    flex-direction: column;
+    text-align: center;
+  }
+}
+@media (min-width: 768px) and (max-width: 1024px) {
+  .section-padding {
+    padding: 2rem;
+  }
+  .impact-section {
+    display: flex;
+    flex-direction: column;
+  }
+  .impact-section .impact-item {
+    margin-bottom: 3rem;
+  }
+}
 .cover-button {
   position: relative;
   display: flex;
@@ -369,7 +420,6 @@
 }
 
 .side-scrolling-text {
-  border: solid red;
   display: inline-block;
   white-space: nowrap;
   color: #595959;
@@ -567,13 +617,11 @@
 }
 .impact-item:hover .impact-icon-container, .impact-item:hover .title-3, .impact-item:hover .caption {
   opacity: 0;
-  /* Fade out content */
 }
 .impact-item .impact-icon-container {
   transition: opacity 0.3s ease;
 }
 
-/* Add multi-colored background per item */
 .impact-4them {
   border: solid 3px #FFB400;
 }

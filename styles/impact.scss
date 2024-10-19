@@ -1,6 +1,5 @@
 /* Main "Our Impact" section */
 .our-impact {
-   //border: solid red;
    padding-bottom: 1rem;
    position: relative;
    width: 100%;
@@ -16,7 +15,6 @@
 }
 
 .impact-section {
-   //border: solid lime;
    display: grid;
    grid-template-columns: repeat(2, 1fr);
    grid-gap: 40px;
@@ -93,7 +91,6 @@
    &:hover .title-3,
    &:hover .caption {
       opacity: 0;
-      /* Fade out content */
    }
 
    .impact-icon-container {
@@ -101,10 +98,7 @@
    }
 }
 
-/* Add multi-colored background per item */
-.impact-4them {
-   //background-color: #FFB400;
-   
+.impact-4them {   
    border: solid 3px #FFB400;
 
    .impact-background-image {
@@ -123,7 +117,6 @@
 }
 
 .impact-4her {
-   //background-color: #FF616D;
    border: solid 3px #FF616D;
 
    .impact-background-image {
@@ -142,7 +135,6 @@
 }
 
 .impact-4all {
-   //background-color: #5BC0EB;
    border: solid 3px #5BC0EB;
 
    .impact-background-image {
@@ -161,7 +153,6 @@
 }
 
 .impact-4us {
-   //background-color: #9BC53D;
    border: solid 3px #9BC53D;
 
    .impact-background-image {
