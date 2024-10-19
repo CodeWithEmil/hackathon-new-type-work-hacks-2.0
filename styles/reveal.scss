@@ -17,20 +17,31 @@
    text-decoration: none;
 }
 
-.underline-effect::after {
+.underline-effect::after, .underline-effect-alt::after, .underline-effect-dark::after {
    content: '';
    position: absolute;
    left: 0;
    bottom: 0;
    width: 0;
    height: 0.5rem;
-   background-color: #FFCC00;
    transition: width 1.8s ease;
+}
+
+.underline-effect::after {
+   background-color: #FFCC00;
 }
 
 .underline-effect-alt::after {
    height: 0.4rem;
    background-color: #ffcc00a0;
+}
+
+.underline-effect-dark::after, .underline-effect-dark-alt::after {
+   background-color: #1b1b1b !important;
+}
+
+.underline-effect-dark-alt::after {
+   height: 0.3rem;
 }
 
 .underline-effect.active::after {

@@ -8,7 +8,8 @@
 @use "./reveal.scss";
 @use "./impact.scss";
 @use "./statistics.scss";
-//@use "./navbar.scss";
+@use "./join-form.scss";
+@use "./footer.scss";
 
 //Fonts
 @import url(https://fonts.googleapis.com/css?family=Inter:100,200,300,regular,500,600,700,800,900,100italic,200italic,300italic,italic,500italic,600italic,700italic,800italic,900italic);
@@ -27,4 +28,9 @@
 
 body {
    width: 100vw;
+   overflow-x: hidden;
+}
+
+a {
+   text-decoration: none;
 }
